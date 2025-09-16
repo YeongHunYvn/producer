@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useRef } from "react";
 import { projectPosters, type ProjectPoster } from "@/data/projects";
+import { withBasePath } from "@/lib/path";
 
 // Derive lists from source data
 const gameProjects: ProjectPoster[] = projectPosters.filter((p) => p.tags.includes("Game"));
@@ -18,7 +19,7 @@ function Row({ items }: { items: ProjectPoster[] }) {
                         <div key={p.title} className="snap-start shrink-0 w-[280px] md:w-[360px]">
                             <div className="rounded-lg overflow-hidden border border-white/10 bg-white/5">
                                 <div className="relative aspect-video">
-                                    <Image src={p.image} alt={p.title} fill className="object-cover" />
+                                    <Image src={withBasePath(p.image)} alt={p.title} fill className="object-cover" />
                                 </div>
                                 <div className="p-4">
                                     <h3 className="text-sm font-semibold">{p.title}</h3>

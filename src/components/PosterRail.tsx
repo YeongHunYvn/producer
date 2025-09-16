@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { projectPosters, type ProjectPoster } from "@/data/projects";
+import { withBasePath } from "@/lib/path";
 
 function PosterCard({ poster, onClick }: { poster: ProjectPoster; onClick: () => void }) {
     return (
@@ -12,7 +13,7 @@ function PosterCard({ poster, onClick }: { poster: ProjectPoster; onClick: () =>
             >
                 {/* Main Poster Image */}
                 <Image
-                    src={poster.image}
+                    src={withBasePath(poster.image)}
                     alt={poster.title}
                     fill
                     sizes="(min-width: 768px) 320px, 280px"

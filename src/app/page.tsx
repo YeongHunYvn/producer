@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { withBasePath } from "@/lib/path";
 import Footer from "@/components/Footer";
 import MusicGrid from "@/components/MusicGrid";
 import PosterRail from "@/components/PosterRail";
@@ -44,7 +45,7 @@ export default function Home() {
       <section id="about" className="relative min-h-screen py-24 z-10 bg-black">
         {/* Background image (basePath/assetPrefix 대응) */}
         <Image
-          src="/yyh.JPG"
+          src={withBasePath("/yyh.JPG")}
           alt=""
           fill
           priority
@@ -85,7 +86,7 @@ export default function Home() {
               <div className="flex items-center gap-6 mb-6">
                 <div className="w-[100px] h-[100px] flex-shrink-0 relative">
                   <Image
-                    src="/images/doong.avif"
+                    src={withBasePath("/images/doong.avif")}
                     alt="Doong Sound"
                     fill
                     className="rounded-xl object-contain"
@@ -122,7 +123,7 @@ export default function Home() {
               <div className="flex items-center gap-6 mb-6">
                 <div className="w-[100px] h-[100px] flex-shrink-0 relative">
                   <Image
-                    src="/images/moledrum.png"
+                    src={withBasePath("/images/moledrum.png")}
                     alt="MoleDrum"
                     fill
                     className="rounded-xl object-contain"
