@@ -1,9 +1,13 @@
 "use client";
 import Image from "next/image";
 import { useRef } from "react";
-import { animationProjects, gameProjects } from "@/data/projects";
+import { projectPosters, type ProjectPoster } from "@/data/projects";
 
-function Row({ items }: { items: typeof gameProjects }) {
+// Derive lists from source data
+const gameProjects: ProjectPoster[] = projectPosters.filter((p) => p.tags.includes("Game"));
+const animationProjects: ProjectPoster[] = projectPosters.filter((p) => p.tags.includes("Animation"));
+
+function Row({ items }: { items: ProjectPoster[] }) {
     const scroller = useRef<HTMLDivElement>(null);
     const scrollBy = (dx: number) => scroller.current?.scrollBy({ left: dx, behavior: "smooth" });
     return (

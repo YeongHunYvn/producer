@@ -41,13 +41,16 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="relative min-h-screen py-24 z-10"
-        style={{
-          backgroundImage: 'url(/yyh.JPG)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundColor: 'black'
-        }}>
+      <section id="about" className="relative min-h-screen py-24 z-10 bg-black">
+        {/* Background image (basePath/assetPrefix 대응) */}
+        <Image
+          src="/yyh.JPG"
+          alt=""
+          fill
+          priority
+          className="object-cover"
+          style={{ zIndex: -1 }}
+        />
         {/* Simple overlay */}
         <div className="absolute inset-0 bg-black/85" />
 
@@ -62,7 +65,7 @@ export default function Home() {
           {/* Profile Section - Text Only */}
           <div className="flex flex-col items-center mb-24">
             <blockquote className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-              "A Good Musician Knows More Than Music."
+              &quot;A Good Musician Knows More Than Music.&quot;
             </blockquote>
             <div className="max-w-3xl text-center">
               <p className="text-white/90 text-lg leading-relaxed mb-4">
@@ -142,7 +145,7 @@ export default function Home() {
                 </li>
                 <li className="flex items-center">
                   <span className="text-blue-400 mr-2 flex-shrink-0">▸</span>
-                  <span>텍스트 게임 '조선몽록' 배포 및 운영</span>
+                  <span>텍스트 게임 &#39;조선몽록&#39; 배포 및 운영</span>
                 </li>
                 <li className="flex items-center">
                   <span className="text-blue-400 mr-2 flex-shrink-0">▸</span>
