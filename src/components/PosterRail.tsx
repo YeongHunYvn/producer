@@ -4,12 +4,11 @@ import { useEffect, useRef, useState } from "react";
 import { projectPosters, type ProjectPoster } from "@/data/projects";
 import { withBasePath } from "@/lib/path";
 
-function PosterCard({ poster, onClick }: { poster: ProjectPoster; onClick: () => void }) {
+function PosterCard({ poster }: { poster: ProjectPoster }) {
     return (
         <div className="group snap-center shrink-0 transform-gpu">
             <div
-                className="relative w-[280px] md:w-[320px] aspect-[2/3] rounded-xl overflow-hidden bg-gradient-to-br from-zinc-800 to-zinc-900 shadow-2xl transition-all duration-500 ease-out hover:scale-105 hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.8)] hover:z-10 cursor-pointer"
-                onClick={onClick}
+                className="relative w-[280px] md:w-[320px] aspect-[2/3] rounded-xl overflow-hidden bg-gradient-to-br from-zinc-800 to-zinc-900 shadow-2xl transition-all duration-500 ease-out hover:scale-105 hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.8)] hover:z-10"
             >
                 {/* Main Poster Image */}
                 <Image
@@ -99,7 +98,6 @@ function ProgressIndicator({ total, current }: { total: number; current: number 
 
 export default function PosterRail() {
     const scrollRef = useRef<HTMLDivElement>(null);
-    const [selectedPoster, setSelectedPoster] = useState<ProjectPoster | null>(null);
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const scrollToIndex = (index: number) => {
@@ -157,11 +155,7 @@ export default function PosterRail() {
                 >
                     <div className="w-10 shrink-0" /> {/* Left padding */}
                     {projectPosters.map((poster) => (
-                        <PosterCard
-                            key={poster.id}
-                            poster={poster}
-                            onClick={() => setSelectedPoster(poster)}
-                        />
+                        <PosterCard key={poster.id} poster={poster} />
                     ))}
                     <div className="w-10 shrink-0" /> {/* Right padding */}
                 </div>
@@ -169,55 +163,7 @@ export default function PosterRail() {
                 <ProgressIndicator total={projectPosters.length} current={currentIndex} />
             </div>
 
-            {/* Modal */}
-            {selectedPoster && (
-                <div
-                    className="fixed inset-0 z-[60] bg-black/90 backdrop-blur-md flex items-center justify-center p-4"
-                    onClick={() => setSelectedPoster(null)}
-                >
-                    <div className="bg-zinc-900 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden shadow-2xl">
-                        <div className="flex flex-col md:flex-row">
-                            <div className="md:w-1/2 relative aspect-[2/3] md:aspect-auto">
-                                <Image
-                                    src={selectedPoster.image}
-                                    alt={selectedPoster.title}
-                                    fill
-                                    className="object-cover"
-                                />
-                            </div>
-                            <div className="md:w-1/2 p-8 space-y-6">
-                                <div>
-                                    <h2 className="text-3xl font-bold text-white mb-2">{selectedPoster.title}</h2>
-                                    <p className="text-amber-400 text-lg font-medium">{selectedPoster.role}</p>
-                                    {selectedPoster.year && (
-                                        <p className="text-white/60 text-sm mt-1">{selectedPoster.year}</p>
-                                    )}
-                                </div>
-
-                                <p className="text-white/80 leading-relaxed">{selectedPoster.description}</p>
-
-                                <div className="flex flex-wrap gap-2">
-                                    {selectedPoster.tags.map((tag) => (
-                                        <span
-                                            key={tag}
-                                            className="px-3 py-1 bg-white/10 text-white/90 text-sm rounded-full border border-white/20"
-                                        >
-                                            {tag}
-                                        </span>
-                                    ))}
-                                </div>
-
-                                <button
-                                    onClick={() => setSelectedPoster(null)}
-                                    className="w-full bg-gradient-to-r from-amber-400 to-amber-600 text-black font-bold py-3 px-6 rounded-xl hover:from-amber-300 hover:to-amber-500 transition-all duration-200"
-                                >
-                                    닫기
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            )}
+            {/* 상세 모달 제거됨 */}
 
             <style jsx>{`
         .scrollbar-hide::-webkit-scrollbar {
