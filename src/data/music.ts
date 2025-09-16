@@ -14,7 +14,7 @@ export const musicItems: MusicItem[] = [
     { id: "8k0uwv9Y6ck", title: "출사표 OST 봄꽃 - by Chuu", tags: ["OST", "Drama"] },
     { id: "9Z0jXwaY7p0", title: "Sealook Episode -Lo-fi", tags: ["Lo-fi", "Animation"] },
     { id: "-jGvCDRONZQ", title: "Sealook Episode - DJ Episode", tags: ["Electronic", "Animation"] },
-    { id: "sdp2rw53beE", title: "Sealook Best Musics", tags: ["Compilation", "Animation"] },
+    { id: "sdp2rw53beE", title: "Sealook Music Collection", tags: ["Compilation", "Animation"] },
     { id: "Ojj0I0eI6J0", title: "KaKao - Peach fiv Song", tags: ["Song", "Character"] },
     { id: "UJTTMXzS7FY", title: "Hero Inside Great Finger Character Song", tags: ["Theme", "Animation"] },
     { id: "1xOwM-eH6EA", title: "Hero Inside Mummy Girl Character Song", tags: ["Theme", "Animation"] },
