@@ -142,7 +142,7 @@ export default function Home() {
                 </li>
                 <li className="flex items-center">
                   <span className="text-blue-400 mr-2 flex-shrink-0">▸</span>
-                  <span>다수의 정부 지원사업 선정</span>
+                  <span>다수의 정부 지원 사업 선정</span>
                 </li>
                 <li className="flex items-center">
                   <span className="text-blue-400 mr-2 flex-shrink-0">▸</span>
@@ -150,7 +150,7 @@ export default function Home() {
                 </li>
                 <li className="flex items-center">
                   <span className="text-blue-400 mr-2 flex-shrink-0">▸</span>
-                  <span>프로젝트 관리 및 팀 리더십</span>
+                  <span>프로젝트 관리 및 팀 리딩</span>
                 </li>
               </ul>
             </div>
