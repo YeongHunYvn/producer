@@ -8,42 +8,49 @@ function PosterCard({ poster }: { poster: ProjectPoster }) {
     return (
         <div className="group snap-center shrink-0 transform-gpu">
             <div
-                className="relative w-[280px] md:w-[320px] aspect-[2/3] rounded-xl overflow-hidden bg-gradient-to-br from-zinc-800 to-zinc-900 shadow-2xl transition-all duration-500 ease-out hover:scale-105 hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.8)] hover:z-10"
+                className="relative w-[280px] md:w-[320px] aspect-[2/3] rounded-3xl overflow-hidden bg-white/[0.03] backdrop-blur-sm border border-white/10 shadow-2xl transition-all duration-500 ease-out hover:scale-105 hover:border-blue-500/30 hover:shadow-[0_25px_50px_-12px_rgba(59,130,246,0.3)] hover:z-10"
             >
+                {/* Gradient overlay on hover */}
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-10" />
+
                 {/* Main Poster Image */}
                 <Image
                     src={withBasePath(poster.image)}
                     alt={poster.title}
                     fill
                     sizes="(min-width: 768px) 320px, 280px"
-                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
                 />
 
                 {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent opacity-70 group-hover:opacity-50 transition-opacity duration-300" />
 
                 {/* Featured Badge */}
                 {poster.featured && (
-                    <div className="absolute top-4 right-4 px-2 py-1 bg-gradient-to-r from-amber-400 to-amber-600 text-black text-xs font-bold rounded-full shadow-lg">
+                    <div className="absolute top-4 right-4 px-3 py-1 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-xs font-bold rounded-full shadow-lg backdrop-blur-sm">
                         FEATURED
                     </div>
                 )}
 
                 {/* Content Overlay */}
-                <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                    <div className="space-y-2">
-                        <h3 className="text-lg font-bold leading-tight">{poster.title}</h3>
-                        <p className="text-amber-300 text-sm font-medium">{poster.role}</p>
-                        <p className="text-white/80 text-xs leading-relaxed line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+                <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <div className="space-y-3">
+                        <h3 className="text-xl font-bold leading-tight bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">
+                            {poster.title}
+                        </h3>
+                        <p className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400 text-sm font-semibold">
+                            {poster.role}
+                        </p>
+                        <p className="text-white/70 text-sm leading-relaxed line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
                             {poster.description}
                         </p>
 
                         {/* Tags */}
-                        <div className="flex flex-wrap gap-1 pt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-150">
+                        <div className="flex flex-wrap gap-2 pt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-150">
                             {poster.tags.slice(0, 3).map((tag) => (
                                 <span
                                     key={tag}
-                                    className="px-2 py-0.5 bg-white/10 backdrop-blur-sm text-white/90 text-xs rounded-full border border-white/20"
+                                    className="px-3 py-1 bg-gradient-to-r from-purple-500/10 to-blue-500/10 backdrop-blur-sm text-white/80 text-xs rounded-full border border-white/20"
                                 >
                                     {tag}
                                 </span>
@@ -53,8 +60,8 @@ function PosterCard({ poster }: { poster: ProjectPoster }) {
                 </div>
 
                 {/* Shine Effect */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -skew-x-12 transform translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 transform translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1500" />
                 </div>
             </div>
         </div>
@@ -65,12 +72,12 @@ function ScrollButton({ direction, onClick }: { direction: "left" | "right"; onC
     return (
         <button
             onClick={onClick}
-            className="absolute top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-black/80 backdrop-blur-sm text-white rounded-full shadow-2xl hover:bg-black/90 hover:scale-110 transition-all duration-300 group"
-            style={{ [direction]: "-24px" }}
+            className="absolute top-1/2 -translate-y-1/2 z-20 w-14 h-14 bg-gradient-to-br from-purple-500/20 to-blue-500/20 backdrop-blur-sm text-white rounded-full shadow-2xl hover:from-purple-500/30 hover:to-blue-500/30 hover:scale-110 transition-all duration-300 group border border-white/10"
+            style={{ [direction]: "-28px" }}
             aria-label={direction === "left" ? "이전 프로젝트" : "다음 프로젝트"}
         >
             <svg
-                className={`w-5 h-5 mx-auto transition-transform duration-200 group-hover:scale-125 ${direction === "right" ? "rotate-180" : ""
+                className={`w-6 h-6 mx-auto transition-transform duration-200 group-hover:scale-125 ${direction === "right" ? "rotate-180" : ""
                     }`}
                 fill="none"
                 stroke="currentColor"
@@ -84,11 +91,13 @@ function ScrollButton({ direction, onClick }: { direction: "left" | "right"; onC
 
 function ProgressIndicator({ total, current }: { total: number; current: number }) {
     return (
-        <div className="flex justify-center mt-8 space-x-2">
+        <div className="flex justify-center mt-12 space-x-3">
             {Array.from({ length: total }).map((_, i) => (
                 <div
                     key={i}
-                    className={`h-1 rounded-full transition-all duration-300 ${i === current ? "w-8 bg-amber-400" : "w-2 bg-white/20"
+                    className={`h-1.5 rounded-full transition-all duration-500 ${i === current
+                            ? "w-12 bg-gradient-to-r from-purple-400 to-blue-400"
+                            : "w-2 bg-white/20 hover:bg-white/30"
                         }`}
                 />
             ))}
@@ -140,8 +149,8 @@ export default function PosterRail() {
         <>
             <div className="relative mt-12">
                 {/* Gradient Fade Edges */}
-                <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[#0b0b0f] to-transparent z-10 pointer-events-none" />
-                <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#0b0b0f] to-transparent z-10 pointer-events-none" />
+                <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-zinc-900 via-zinc-900/50 to-transparent z-10 pointer-events-none" />
+                <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-zinc-900 via-zinc-900/50 to-transparent z-10 pointer-events-none" />
 
                 {/* Scroll Buttons */}
                 <ScrollButton direction="left" onClick={() => scrollBy("left")} />
