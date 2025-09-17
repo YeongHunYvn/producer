@@ -1,0 +1,6 @@
+<svg width="400" height="225" viewBox="0 0 400 225" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="400" height="225" fill="#FF5500"/>
+<path d="M100 80H300V145H100V80Z" fill="white"/>
+<path d="M120 100H280V125H120V100Z" fill="#FF5500"/>
+<text x="200" y="180" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="18" font-weight="bold">SoundCloud</text>
+</svg>

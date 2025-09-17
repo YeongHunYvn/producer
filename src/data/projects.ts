@@ -128,6 +128,24 @@ export const projectPosters: ProjectPoster[] = [
         tags: ["OST", "Drama"],
         year: 2019,
     },
+    {
+        id: "heroinside",
+        title: "Hero Inside",
+        role: "히어로 인사이드",
+        description: "Animation",
+        image: "/projects/cover/heroinside.jpg",
+        tags: ["Animation"],
+        year: 2023,
+    },
+    {
+        id: "rotarypark",
+        title: "Rotary Park",
+        role: "로터리파크",
+        description: "Animation",
+        image: "/projects/cover/rotarypark.jpg",
+        tags: ["Animation"],
+        year: 2022,
+    },
 ];
 
 
