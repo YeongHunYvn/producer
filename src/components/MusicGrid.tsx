@@ -9,7 +9,6 @@ function youtubeThumbnailUrl(id: string) {
 
 export default function MusicGrid() {
     const [active, setActive] = useState<MusicItem | null>(null);
-    const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
     return (
         <>
@@ -19,8 +18,6 @@ export default function MusicGrid() {
                         key={item.id}
                         className="group relative text-left rounded-3xl overflow-hidden bg-white/[0.03] backdrop-blur-sm border border-white/10 hover:border-purple-500/30 transition-all duration-500 hover:transform hover:scale-[1.02] focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-500/40"
                         onClick={() => setActive(item)}
-                        onMouseEnter={() => setHoveredIndex(index)}
-                        onMouseLeave={() => setHoveredIndex(null)}
                     >
                         {/* Gradient overlay on hover */}
                         <div className={`absolute inset-0 bg-gradient-to-br from-purple-600/20 to-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none`} />

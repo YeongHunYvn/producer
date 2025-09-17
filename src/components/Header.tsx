@@ -1,5 +1,5 @@
 "use client";
-import Link from "next/link";
+// import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const sections = [
@@ -32,7 +32,7 @@ export default function Header() {
             for (let i = sections.length - 1; i >= 0; i--) {
                 const element = document.getElementById(sections[i].id);
                 if (element) {
-                    const rect = element.getBoundingClientRect();
+                    // const rect = element.getBoundingClientRect();
                     const offsetTop = element.offsetTop;
 
                     if (scrollPosition >= offsetTop) {

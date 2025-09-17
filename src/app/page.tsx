@@ -3,7 +3,7 @@ import { withBasePath } from "@/lib/path";
 import Footer from "@/components/Footer";
 import MusicGrid from "@/components/MusicGrid";
 import PosterRail from "@/components/PosterRail";
-import SocialIcons from "@/components/SocialIcons";
+// import SocialIcons from "@/components/SocialIcons";
 import HeroSection from "@/components/HeroSection";
 
 export default function Home() {
@@ -210,7 +210,7 @@ export default function Home() {
                       <ul className="mt-6 space-y-2 text-white/60 text-sm">
                         <li>인디 게임 스튜디오 설립 및 운영</li>
                         <li>다수의 정부 지원 사업 선정</li>
-                        <li>텍스트 게임 '조선몽록' 배포 및 운영</li>
+                        <li>텍스트 게임 &apos;조선몽록&apos; 배포 및 운영</li>
                       </ul>
                     </div>
                   </div>
