@@ -81,6 +81,7 @@ export const musicItems: MusicItem[] = [
     { id: "UJTTMXzS7FY", title: "Hero Inside Great Finger Character Song", category: "animation", tags: ["Song", "Latin"] },
     { id: "1xOwM-eH6EA", title: "Hero Inside Mummy Girl Character Song", category: "animation", tags: ["Song", "Electronic"] },
     { id: "PF6gkw78KRE", title: "Hero Inside Disco Duo Character Song", category: "animation", tags: ["Song", "Disco"] },
+    { id: "hit-halloween", title: "HIT Halloween", category: "game", tags: ["OST", "Event"], soundcloudUrl: "https://soundcloud.com/compyyh/hit-halloween" },
 
     // POP Music
     { id: "8k0uwv9Y6ck", title: "출사표 OST 봄꽃 - by Chuu", category: "pop", tags: ["OST", "Drama"] },
