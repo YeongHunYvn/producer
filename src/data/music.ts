@@ -15,6 +15,7 @@ export const musicItems: MusicItem[] = [
     // Game Music
     { id: "ZOxF_COk6TI", title: "SoulArk Trailer", category: "game", tags: ["Trailer", "Epic", "Action"] },
     { id: "_OCJ03bOyfs", title: "Heroes Showdown Trailer", category: "game", tags: ["Trailer", "Epic", "Song"] },
+    { id: "yoTvu34lbsI", title: "T.O.P & Unknown Heroes Main Theme", category: "game", tags: ["Orchestral", "Hybrid"] },
     {
         id: "hit-gang-gang-sullai",
         title: "Hit - Gang Gang Sullai",
@@ -28,7 +29,7 @@ export const musicItems: MusicItem[] = [
         id: "hit-the-lunar-new-year",
         title: "Hit - The Lunar New Year",
         category: "game",
-        tags: ["Ehtnic", "Orchestral"],
+        tags: ["Ethnic", "Orchestral"],
         platform: "soundcloud",
         soundcloudUrl: "https://soundcloud.com/compyyh/hit-the-lunar-new-year",
         thumbnailUrl: "https://i1.sndcdn.com/artworks-000204591044-d0rbbl-t500x500.jpg"
@@ -73,17 +74,16 @@ export const musicItems: MusicItem[] = [
     // Animation Music
     { id: "2OCKBeDNenw", title: "Larva Season4 Opening Song (Trailer)", category: "animation", tags: ["Song", "Band", "Latin"] },
     { id: "eqN7X7NIZ2U", title: "T-Buster Ending Song", category: "animation", tags: ["Song", "Band"] },
-    { id: "iia2HAu-thE", title: "Sealook Engding Song - by Riize", category: "animation", tags: ["K-Pop", "Soul"] },
+    { id: "-jGvCDRONZQ", title: "Sealook Episode - DJ", category: "animation", tags: ["Electronic"] },
     { id: "9Z0jXwaY7p0", title: "Sealook Episode - Lo-fi", category: "animation", tags: ["Lo-fi", "Soul"] },
-    { id: "-jGvCDRONZQ", title: "Sealook Episode - DJ Episode", category: "animation", tags: ["Electronic"] },
     { id: "sdp2rw53beE", title: "Sealook Music Collection", category: "animation", tags: ["Compilation"] },
-    { id: "Ojj0I0eI6J0", title: "KaKao - Peach fiv Song", category: "pop", tags: ["Casual"] },
+    { id: "Ojj0I0eI6J0", title: "KaKao - Peach fiv Song", category: "animation", tags: ["Casual"] },
     { id: "UJTTMXzS7FY", title: "Hero Inside Great Finger Character Song", category: "animation", tags: ["Song", "Latin"] },
     { id: "1xOwM-eH6EA", title: "Hero Inside Mummy Girl Character Song", category: "animation", tags: ["Song", "Electronic"] },
     { id: "PF6gkw78KRE", title: "Hero Inside Disco Duo Character Song", category: "animation", tags: ["Song", "Disco"] },
-    { id: "hit-halloween", title: "HIT Halloween", category: "game", tags: ["OST", "Event"], soundcloudUrl: "https://soundcloud.com/compyyh/hit-halloween" },
 
     // POP Music
+    { id: "iia2HAu-thE", title: "Sealook Ending Song - by Riize", category: "pop", tags: ["K-Pop", "Soul"] },
     { id: "8k0uwv9Y6ck", title: "출사표 OST 봄꽃 - by Chuu", category: "pop", tags: ["OST", "Drama"] },
     { id: "uH5U7VQfutY", title: "너도 올래", category: "pop", tags: ["CityPop", "Dance"] },
     { id: "N4daO4QF5_c", title: "왠지 좋은 일이 생길 것 같아", category: "pop", tags: ["K-Pop", "Dance"] },

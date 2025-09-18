@@ -27,7 +27,7 @@ const oswald = Oswald({
 export const metadata: Metadata = {
   title: "YUN YEONG HUN | Music Producer",
   description: "Only One, Not Number One — Genre-transcending Sound Creator",
-  metadataBase: new URL("https://yeonghunyvn.github.io"),
+  metadataBase: new URL("https://yeonghunyun.github.io"),
 };
 
 export default function RootLayout({
