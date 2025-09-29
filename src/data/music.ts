@@ -1,4 +1,4 @@
-export type MusicCategory = 'game' | 'animation' | 'pop';
+export type MusicCategory = 'animation' | 'game' | 'pop';
 
 export type MusicItem = {
     id: string; // YouTube video id or SoundCloud track id
@@ -12,6 +12,18 @@ export type MusicItem = {
 };
 
 export const musicItems: MusicItem[] = [
+
+    // Animation Music
+    { id: "2OCKBeDNenw", title: "Larva Season4 Opening Song (Trailer)", category: "animation", tags: ["Song", "Band", "Latin"] },
+    { id: "eqN7X7NIZ2U", title: "T-Buster Ending Song", category: "animation", tags: ["Song", "Band"] },
+    { id: "-jGvCDRONZQ", title: "Sealook Episode - DJ", category: "animation", tags: ["Electronic"] },
+    { id: "9Z0jXwaY7p0", title: "Sealook Episode - Lo-fi", category: "animation", tags: ["Lo-fi", "Soul"] },
+    { id: "sdp2rw53beE", title: "Sealook Music Collection", category: "animation", tags: ["Compilation"] },
+    { id: "Ojj0I0eI6J0", title: "KaKao - Peach fiv Song", category: "animation", tags: ["Casual"] },
+    { id: "UJTTMXzS7FY", title: "Hero Inside Great Finger Character Song", category: "animation", tags: ["Song", "Latin"] },
+    { id: "1xOwM-eH6EA", title: "Hero Inside Mummy Girl Character Song", category: "animation", tags: ["Song", "Electronic"] },
+    { id: "PF6gkw78KRE", title: "Hero Inside Disco Duo Character Song", category: "animation", tags: ["Song", "Disco"] },
+
     // Game Music
     { id: "ZOxF_COk6TI", title: "SoulArk Trailer", category: "game", tags: ["Trailer", "Epic", "Action"] },
     { id: "_OCJ03bOyfs", title: "Heroes Showdown Trailer", category: "game", tags: ["Trailer", "Epic", "Song"] },
@@ -71,17 +83,6 @@ export const musicItems: MusicItem[] = [
         thumbnailUrl: "https://i1.sndcdn.com/artworks-000361514523-ik8vzo-t500x500.jpg"
     },
 
-    // Animation Music
-    { id: "2OCKBeDNenw", title: "Larva Season4 Opening Song (Trailer)", category: "animation", tags: ["Song", "Band", "Latin"] },
-    { id: "eqN7X7NIZ2U", title: "T-Buster Ending Song", category: "animation", tags: ["Song", "Band"] },
-    { id: "-jGvCDRONZQ", title: "Sealook Episode - DJ", category: "animation", tags: ["Electronic"] },
-    { id: "9Z0jXwaY7p0", title: "Sealook Episode - Lo-fi", category: "animation", tags: ["Lo-fi", "Soul"] },
-    { id: "sdp2rw53beE", title: "Sealook Music Collection", category: "animation", tags: ["Compilation"] },
-    { id: "Ojj0I0eI6J0", title: "KaKao - Peach fiv Song", category: "animation", tags: ["Casual"] },
-    { id: "UJTTMXzS7FY", title: "Hero Inside Great Finger Character Song", category: "animation", tags: ["Song", "Latin"] },
-    { id: "1xOwM-eH6EA", title: "Hero Inside Mummy Girl Character Song", category: "animation", tags: ["Song", "Electronic"] },
-    { id: "PF6gkw78KRE", title: "Hero Inside Disco Duo Character Song", category: "animation", tags: ["Song", "Disco"] },
-
     // POP Music
     { id: "iia2HAu-thE", title: "Sealook Ending Song - by Riize", category: "pop", tags: ["K-Pop", "Soul"] },
     { id: "8k0uwv9Y6ck", title: "출사표 OST 봄꽃 - by Chuu", category: "pop", tags: ["OST", "Drama"] },
@@ -97,8 +98,8 @@ export const musicItems: MusicItem[] = [
 
 export const categoryLabels: Record<MusicCategory | 'all', string> = {
     all: 'All',
-    game: 'Game',
     animation: 'Animation',
+    game: 'Game',
     pop: 'POP'
 };
 

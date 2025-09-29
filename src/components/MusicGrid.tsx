@@ -38,7 +38,7 @@ export default function MusicGrid() {
         };
     }, []);
 
-    const categories: Array<MusicCategory | 'all'> = ['all', 'game', 'animation', 'pop'];
+    const categories: Array<MusicCategory | 'all'> = ['all', 'animation', 'game', 'pop'];
 
     return (
         <>

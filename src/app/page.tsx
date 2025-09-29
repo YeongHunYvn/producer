@@ -75,7 +75,7 @@ export default function Home() {
               </h2>
               <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full" />
             </div>
-            <p className="text-white/40 text-lg mt-6 font-light tracking-widest uppercase">Game, Animation & Drama Soundtracks</p>
+            <p className="text-white/40 text-lg mt-6 font-light tracking-widest uppercase">Animation, Game & Drama Soundtracks</p>
           </div>
           <PosterRail />
         </div>
@@ -176,7 +176,7 @@ export default function Home() {
                         </div>
                       </div>
                       <ul className="mt-6 space-y-2 text-white/60 text-sm text-left md:text-right">
-                        <li>게임, 애니메이션, 광고 음악 감독</li>
+                        <li>애니메이션, 게임, 드라마 음악 감독</li>
                         <li>다양한 장르의 음악 작곡 및 편곡</li>
                         <li>사운드 디자인 및 오디오 포스트 프로덕션</li>
                       </ul>
@@ -208,8 +208,8 @@ export default function Home() {
                         </div>
                       </div>
                       <ul className="mt-6 space-y-2 text-white/60 text-sm">
-                        <li>인디 게임 스튜디오 설립 및 운영</li>
-                        <li>다수의 정부 지원 사업 선정</li>
+                        <li>자기계발 IT 솔루션 스타트업 창업</li>
+                        <li>자기계발 플랫폼 '일행' 운영</li>
                         <li>텍스트 게임 &apos;조선몽록&apos; 배포 및 운영</li>
                       </ul>
                     </div>
