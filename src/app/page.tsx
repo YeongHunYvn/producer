@@ -208,7 +208,7 @@ export default function Home() {
                         </div>
                       </div>
                       <ul className="mt-6 space-y-2 text-white/60 text-sm">
-                        <li>자기계발 IT 솔루션 스타트업 창업</li>
+                        <li>자기계발 솔루션 IT 스타트업 창업</li>
                         <li>자기계발 플랫폼 &apos;일행&apos; 운영</li>
                         <li>텍스트 게임 &apos;조선몽록&apos; 배포 및 운영</li>
                       </ul>
