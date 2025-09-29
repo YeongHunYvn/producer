@@ -24,7 +24,7 @@ export const projectPosters: ProjectPoster[] = [
         id: "sealook",
         title: "Sealook",
         role: "씰룩",
-        description: "Milliovolt",
+        description: "The Pinkfong Company",
         image: "/projects/cover/sealook.webp",
         tags: ["Animation"],
         year: 2022,
